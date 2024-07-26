@@ -3,6 +3,7 @@ import React from "react";
 import { View,Text,Image,StyleSheet } from "react-native";
 import ButtonClick from "./Button";
 import { ScrollView } from "react-native";
+import RestaurantCards from "./RestaurantCards";
 
  const App=()=>{
 
@@ -22,7 +23,7 @@ return(
     </Text>
       </View>   
       <View style={homePage.cusine}>
-        <View>
+
       <Image
           source={Yumiee}
           style={homePage.bhojstyle}
@@ -31,11 +32,18 @@ return(
     style={homePage.SloganList}>
 The Taste of Himalayas....
     </Text>
-    </View>
-<ButtonClick></ButtonClick>
-          </View>   
 </View>
+<ScrollView horizontal={true} style={homePage.cardContainer}>
+<RestaurantCards/>
+<RestaurantCards/>
+<RestaurantCards/>
+<RestaurantCards/>
+<RestaurantCards/>
 </ScrollView>
+<ButtonClick></ButtonClick>
+</View>   
+</ScrollView>
+
 )
  }
 
@@ -87,6 +95,10 @@ The Taste of Himalayas....
     height: 300,
     borderRadius:40,
     marginRight:60
+  },
+  cardContainer:{
+  flex:1,
+  flexDirection:"row"
   }
  })
  
