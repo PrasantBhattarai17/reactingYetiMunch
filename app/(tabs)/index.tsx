@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import App from '@/components/app';
+import App from '@/components/src/app';
 import { Text, View } from '@/components/Themed';
 
 export default function TabOneScreen() {

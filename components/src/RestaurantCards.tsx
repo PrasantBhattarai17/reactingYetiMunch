@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View,Image } from 'react-native';
+import { StyleSheet, Text, View,Image, Pressable } from 'react-native';
 import React from 'react'
 
 export default function RestaurantCards() {
@@ -15,6 +15,9 @@ export default function RestaurantCards() {
         <Text style={styles.remainText}>Location</Text>
         <Text style={styles.remainText}>cusines_1,Cusines_2</Text>
         <Text style={styles.remainText}>Rating</Text>
+        <Pressable style={styles.pressvisit}>
+          <Text   style={styles.textbutton}>Visit us</Text>
+        </Pressable>
     </View>
   )
 };
@@ -26,7 +29,7 @@ flex:1,
 alignItems:"center",
 backgroundColor:"antiquewhite",
 width:250,
-height:300,
+height:350,
 margin:5,
 borderRadius:5,
 },
@@ -47,5 +50,22 @@ fontSize:16,
 remainText:{
     fontStyle:"italic",
     fontSize:16,
+},
+pressvisit:{
+  height:40,
+  width:80,
+  backgroundColor:"blueviolet",
+  flexDirection:"column",
+  justifyContent:"center",
+  marginTop:6,
+  borderRadius:5,
+  elevation:20,
+  shadowColor:"#171717"
+},
+textbutton:{
+  color:"white",
+  textAlign:"center",
+   fontSize:18,
+   fontWeight:"bold",
 }
 });

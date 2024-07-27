@@ -4,6 +4,7 @@ import { View,Text,Image,StyleSheet } from "react-native";
 import ButtonClick from "./Button";
 import { ScrollView } from "react-native";
 import RestaurantCards from "./RestaurantCards";
+import Location from "./Location";
 
  const App=()=>{
 
@@ -22,6 +23,9 @@ return(
       Yeti Munch
     </Text>
       </View>   
+    <View>
+      <Location/>
+    </View>
       <View style={homePage.cusine}>
 
       <Image
@@ -32,7 +36,10 @@ return(
     style={homePage.SloganList}>
 The Taste of Himalayas....
     </Text>
+<ButtonClick></ButtonClick>
 </View>
+<View style={homePage.cardContainerTwo}>
+<Text style={homePage.headingrestro}>Top Restaurants</Text>
 <ScrollView horizontal={true} style={homePage.cardContainer}>
 <RestaurantCards/>
 <RestaurantCards/>
@@ -40,7 +47,7 @@ The Taste of Himalayas....
 <RestaurantCards/>
 <RestaurantCards/>
 </ScrollView>
-<ButtonClick></ButtonClick>
+</View>
 </View>   
 </ScrollView>
 
@@ -79,15 +86,13 @@ The Taste of Himalayas....
     color:"#ffffff",
     fontSize:20,
     fontStyle:'italic',
-    marginBottom:70,
+    marginBottom:10,
     alignSelf:"center",
-    paddingRight:70
   },
   imagestyle:{
     width: 100,
     height: 100,
     borderRadius:0,
-    marginTop:10,
     marginRight:100
   },
   bhojstyle:{
@@ -97,8 +102,16 @@ The Taste of Himalayas....
     marginRight:60
   },
   cardContainer:{
-  flex:1,
   flexDirection:"row"
+  },
+  cardContainerTwo:{
+  flexDirection:"column"
+  },
+  headingrestro:{
+    fontSize:20,
+    fontWeight:"bold",
+    color:"antiquewhite",
+    margin:7
   }
  })
  
