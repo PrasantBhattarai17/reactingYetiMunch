@@ -1,10 +1,11 @@
 import React from "react";
 
-import { View,Text,Image,StyleSheet } from "react-native";
+import { View,Text,Image,StyleSheet,Linking } from "react-native";
 import ButtonClick from "./Button";
 import { ScrollView } from "react-native";
 import RestaurantCards from "./RestaurantCards";
 import Location from "./Location";
+import { openURL } from "expo-linking";
 
  const App=()=>{
 
@@ -112,8 +113,9 @@ The Taste of Himalayas....
     fontWeight:"bold",
     color:"antiquewhite",
     margin:7
-  }
- })
+  },
+ }
+);
  
 
  export default App;

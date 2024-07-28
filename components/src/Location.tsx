@@ -8,7 +8,7 @@ export default function Location() {
      style={
       styles.inputbox
     } defaultValue='Enter your Location'/>
-     <TouchableOpacity style={styles.button}>
+     <TouchableOpacity style={[styles.button,styles.elevatedButton]}>
       <Text
       style={styles.textbutton}>
         Enter
@@ -54,5 +54,13 @@ const styles = StyleSheet.create({
      marginTop:6,
      fontSize:18,
      fontWeight:"bold"
-  }
+  },
+  elevatedButton:{
+    elevation:20,
+    shadowColor:"white",
+    shadowOffset:{
+        height:1,
+        width:1
+    },
+ }
 });

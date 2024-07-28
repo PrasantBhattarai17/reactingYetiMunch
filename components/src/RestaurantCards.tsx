@@ -1,10 +1,16 @@
-import { StyleSheet, Text, View,Image, Pressable } from 'react-native';
+import { StyleSheet, Text, View,Image, Pressable,Linking } from 'react-native';
 import React from 'react'
+import { openURL } from 'expo-linking';
+import RestaurantPage from './RestaurantPage';
 
 export default function RestaurantCards() {
     const Yumiee=require("./yum.png");
+    const openWebsite=(websiteLink:string)=>{
+      Linking.openURL(websiteLink);
+    };
+  
   return (
-    <View style={styles.aCard}>
+    <View style={[styles.aCard,styles.elevatedCard]}>
         <View style={styles.imagedummy}>
         <Image
           source={Yumiee}
@@ -15,7 +21,7 @@ export default function RestaurantCards() {
         <Text style={styles.remainText}>Location</Text>
         <Text style={styles.remainText}>cusines_1,Cusines_2</Text>
         <Text style={styles.remainText}>Rating</Text>
-        <Pressable style={styles.pressvisit}>
+        <Pressable style={styles.pressvisit} onPress={()=>openWebsite("Swiggy.com")}>
           <Text   style={styles.textbutton}>Visit us</Text>
         </Pressable>
     </View>
@@ -67,5 +73,14 @@ textbutton:{
   textAlign:"center",
    fontSize:18,
    fontWeight:"bold",
+},
+elevatedCard:{
+  elevation:20,
+  shadowColor:"black",
+  shadowOffset:{
+      height:1,
+      width:1
+  }
 }
-});
+}
+);

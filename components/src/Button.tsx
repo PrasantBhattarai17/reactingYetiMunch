@@ -5,7 +5,7 @@ const ButtonClick=()=>{
     return(
     <View style={buttonbeauty.layer}>
          <Pressable  onPress={ ()=>alert('Your order is placed!')}>
-         <Text style={buttonbeauty.buttontext} >Order Now</Text>
+         <Text style={[buttonbeauty.buttontext,buttonbeauty.elevatedButton]} >Order Now</Text>
         </Pressable>
     </View>
     )
@@ -23,14 +23,24 @@ const buttonbeauty=StyleSheet.create({
         justifyContent:"center",
         borderRadius:20,
         borderColor:"black",
-        borderWidth:2
+        borderWidth:1
     },
     buttontext:{
         color:"blueviolet",
         fontSize:16,
         textAlign:"center",
         fontStyle:"italic",
-        fontWeight:"bold"
+        fontWeight:"bold",   
+     },
+     elevatedButton:{
+        elevation:20,
+        shadowColor:"black",
+        shadowOffset:{
+            height:1,
+            width:1
+        },
+        shadowOpacity:0.4,
+        shadowRadius:3
      }
     
      }
